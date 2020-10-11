@@ -44,3 +44,5 @@ TABLESPACE originspace;
 
 ALTER TABLE public."Inputs"
     OWNER to originator;
+
+SET default_tablespace = originspace;
