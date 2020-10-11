@@ -9,7 +9,7 @@ CREATE ROLE originator WITH
   NOREPLICATION;
 
 --Creating Tablespace 
--- WINDOWS
+-- WINDOWS Users
 -- If you are creating tablespace in a different folder outside postgressql folder, you need to provide full access to "NETWORK SERVICE" account
 CREATE TABLESPACE originspace
   OWNER originator
@@ -40,7 +40,6 @@ CREATE TABLE public."Inputs"
  Category Varchar(20),
  Active Varchar(50) Not Null
 )
-
 TABLESPACE originspace;
 
 ALTER TABLE public."Inputs"
