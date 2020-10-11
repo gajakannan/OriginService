@@ -9,7 +9,8 @@ CREATE ROLE originator WITH
   NOREPLICATION;
 
 --Creating Tablespace 
-
+-- WINDOWS
+-- If you are creating tablespace in a different folder outside postgressql folder, you need to provide full access to "NETWORK SERVICE" account
 CREATE TABLESPACE originspace
   OWNER originator
   LOCATION 'C:\Program Files\PostgreSQL\13\data\origin';
