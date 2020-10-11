@@ -13,7 +13,7 @@ CREATE ROLE originator WITH
 -- If you are creating tablespace in a different folder outside postgressql folder, you need to provide full access to "NETWORK SERVICE" account
 CREATE TABLESPACE originspace
   OWNER originator
-  LOCATION 'C:\Program Files\PostgreSQL\13\data\origin';
+  LOCATION 'C:\<Folder in your machine>\origin';
 
 ALTER TABLESPACE originspace
   OWNER TO originator;
@@ -46,3 +46,4 @@ ALTER TABLE public."Inputs"
     OWNER to originator;
 
 SET default_tablespace = originspace;
+SET DEFAULT_Database = origindb;
