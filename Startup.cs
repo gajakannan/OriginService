@@ -11,6 +11,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+using OriginService.Models;
+using Microsoft.EntityFrameworkCore;
+using Npgsql;
+
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text; 
+
 namespace OriginService
 {
     public class Startup
@@ -25,6 +33,16 @@ namespace OriginService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionString = Configuration["ConnectionStrings:OriginDatabase"];
+			var dbPassword = Configuration["ConnectionStrings:DbPassword"];
+
+			var builder = new NpgsqlConnectionStringBuilder(connectionString)
+			{
+				Password = dbPassword
+			};
+
+            services.AddDbContext<OriginContext>(options => options.UseNpgsql(builder.ConnectionString));
+
             services.AddControllers();
         }
 
@@ -39,6 +57,8 @@ namespace OriginService
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
