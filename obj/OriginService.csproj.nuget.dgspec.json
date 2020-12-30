@@ -1,29 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gajap\\Documents\\sandbox\\OriginService\\OriginService\\OriginService.csproj": {}
+    "C:\\Users\\gajap\\Documents\\github\\OriginService\\OriginService\\OriginService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gajap\\Documents\\sandbox\\OriginService\\OriginService\\OriginService.csproj": {
+    "C:\\Users\\gajap\\Documents\\github\\OriginService\\OriginService\\OriginService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gajap\\Documents\\sandbox\\OriginService\\OriginService\\OriginService.csproj",
+        "projectUniqueName": "C:\\Users\\gajap\\Documents\\github\\OriginService\\OriginService\\OriginService.csproj",
         "projectName": "OriginService",
-        "projectPath": "C:\\Users\\gajap\\Documents\\sandbox\\OriginService\\OriginService\\OriginService.csproj",
+        "projectPath": "C:\\Users\\gajap\\Documents\\github\\OriginService\\OriginService\\OriginService.csproj",
         "packagesPath": "C:\\Users\\gajap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gajap\\Documents\\sandbox\\OriginService\\OriginService\\obj\\",
+        "outputPath": "C:\\Users\\gajap\\Documents\\github\\OriginService\\OriginService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gajap\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -34,7 +35,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -87,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
